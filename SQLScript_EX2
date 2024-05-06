@@ -26,7 +26,7 @@ INSERT INTO Filmes (Titulo, Minutos) VALUES ("Metropole", 0);
 INSERT INTO Filmes (Titulo, Minutos) VALUES ("A lista", 120);
 
 DELIMITER $
-CREATE TRIGGER chk_minutos BEFORE INSERT ON Filmes
+CREATE TRIGGER chk_minuto BEFORE INSERT ON Filmes
 FOR EACH ROW
 BEGIN
    IF NEW.Minutos < 0 then
@@ -40,3 +40,23 @@ BEGIN
    END$
    
    DELIMITER ; 
+   
+   CREATE TABLE Log deletions (
+   ID     INT AUTO_INCREMENT PRIMARY KEY,
+   Titulo VARCHAR(60),
+   Quando DateTime,
+   Quem   VARCHAR (40)
+   );
+   
+   DELIMITER $
+   CREATE TRIGGER lod_deletions AFTER DELETE ON Filmes
+   for each row
+   begin
+   INSERT INTO Log deletions VALUES (null, old.titulo, sysdate(), user());
+   end$
+   DELIMITER ;
+   
+   delete from Filmes where id = 2;
+   delete from Filmes where id = 4;
+   
+   SELECT*FROM Log_deletions;
