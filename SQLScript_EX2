@@ -41,7 +41,7 @@ BEGIN
    
    DELIMITER ; 
    
-   CREATE TABLE Log deletions (
+   CREATE TABLE Log_deletions (
    ID     INT AUTO_INCREMENT PRIMARY KEY,
    Titulo VARCHAR(60),
    Quando DateTime,
@@ -52,7 +52,7 @@ BEGIN
    CREATE TRIGGER lod_deletions AFTER DELETE ON Filmes
    for each row
    begin
-   INSERT INTO Log deletions VALUES (null, old.titulo, sysdate(), user());
+   INSERT INTO Log_deletions VALUES (null, old.titulo, sysdate(), user());
    end$
    DELIMITER ;
    
