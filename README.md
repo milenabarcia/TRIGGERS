@@ -21,3 +21,12 @@ A TAREFA É INDIVIDUAL, PODENDO SER UTILIZADO QUALQUER MATERIAL PARA REALIZAÇÃ
 UTILIZE O TEMPO DE AULA PARA EXECUTAR A ATIVIDADE E TIRAR AS DÚVIDAS COM O PROFESSOR;
 
 DURANTE O PROCESSO SE FOR UTILIZADO A OPÇÃO MODEL DISPONÍVEL NO MYSQL WORKBENCH, FAÇA O DEVIDO REGISTRO DO SEU USO NO README.MD.
+
+
+# MODELO LÓGICO EXEMPLO 1 
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]
+(https://github.com/milenabarcia/TRIGGERS/blob/main/TRIGGERSex1ERR.jpg?raw=true).
+
+
+# Nome: Milena Mazzei Barcia RA: 237291
